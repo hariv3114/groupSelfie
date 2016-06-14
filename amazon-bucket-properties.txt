@@ -1,0 +1,34 @@
+{
+  "Version": "2016-05-18",
+  "Statement": [
+    {
+      "Sid": "UploadFile",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::132347856080:user/GroupSelfieUpload"
+      },
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObjectAcl",
+        "s3:PutObject"
+      ],
+      "Resource": "files.groupselfiehariv31.us/*"
+    },
+    {
+      "Sid": "AllowPublicRead",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": "s3:GetObject",
+      "Resource": "files.groupselfiehariv31.us/*"
+    },
+    {
+      "Sid": "crossdomainAccess",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "files.groupselfiehariv31.us/crossdomain.xml"
+    }
+  ]
+}

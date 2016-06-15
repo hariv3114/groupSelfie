@@ -6,3 +6,5 @@ coverage/
 .idea/
 .tmp/
 dist/
+
+amazon-bucket-properties.txt
